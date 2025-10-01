@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">
+    ☰ Menu
+  </div>
+  <div class="container">
+    <div class="sidebar">
+      <h2>NY Transit<br>Operation</h2>
+      <a href="index.html">NY Transit Operations</a>
+      <a href="why-metrodesk.html">Why MetroDesk</a>
+      <a href="service-management.html" class="active">Service Management</a>
+      <a href="account.html">Account</a>
+    </div>
+
+    <div class="content">
+      <section class="section" data-aos="fade-up">
+        <h1>🛠 Service Management</h1>
+        <p>
+          Our service management system monitors transit performance, ensures timely maintenance, and keeps riders informed of schedule changes or delays.
+        </p>
+
+        <h2>🔧 Key Features:</h2>
+        <ul>
+          <li>📈 Real-time route monitoring</li>
+          <li>🛠 Preventive and corrective maintenance scheduling</li>
+          <li>📢 Live updates via apps and signage</li>
+          <li>💬 Customer service ticketing and response tracking</li>
+        </ul>
+      </section>
+
+<section class="section" data-aos="fade-up">
+  <h2>👥 Our Teams</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <img src="mingo.jpeg" alt="Programming Team" class="feature-icon round">
+      <h3>Programming Team</h3>
+      <p>Team: Mannassah Mingo, Aneka Neptune, Laxmikanth Reddy Malreddy</p>
+    </div>
+
+    <div class="feature-card">
+      <img src="aneka.jpeg" alt="Networking Team" class="feature-icon round">
+      <h3>Networking Team</h3>
+      <p>Team: Aneka Neptune, T'Ranjai Benjamin, Mario Burton</p>
+    </div>
+
+    <div class="feature-card">
+      <img src="ty.jpg" alt="Marketing Team" class="feature-icon round">
+      <h3>Marketing Team</h3>
+      <p>Team: Tyquira Bennett, Ronny Dunson</p>
+    </div>
+
+    <div class="feature-card">
+      <img src="dex.jpg" alt="Design Team" class="feature-icon round">
+      <h3>Design Team</h3>
+      <p>Team: Dexroy Cain, Keyla Tejada, Tyquira Bennett</p>
+    </div>
+	
+	<div class="feature-card">
+      <img src="ranjai.jpeg" alt="Networking Team" class="feature-icon round">
+      <h3>Database Team</h3>
+      <p>Lead: T'Ranjai Benjamin, Aneka Neptune, Mario Burton</p>
+    </div>
+  </div>
+</section>
+
+    </div> 
+  </div> 
+
+  <footer style="text-align: center; padding: 30px 0; font-size: 14px; color: #888;">
+    © MTA Operations – Founded in 1965
+  </footer>
+
+  <button id="backToTopBtn" title="Go to top">↑</button>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true });</script>
+  <script>
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    };
+
+    backToTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+
+</body>
+</html>
+

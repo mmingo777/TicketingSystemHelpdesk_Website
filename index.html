@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NY Transit Operations</title>
+
+  <!-- Font & AOS CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+   <div class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">
+    ☰ Menu
+   </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2>NY Transit<br>Operation</h2>
+      <a href="index.html" class="active">NY Transit Operations</a>
+      <a href="why-metrodesk.html">Why MetroDesk?</a>
+      <a href="service-management.html">Service Management</a>
+      <a href="account.html">Account</a>
+    </div>
+
+    <div class="content">
+      <div class="section" data-aos="fade-up">
+        <h1>🗽 New York City Transit Overview</h1>
+        <p>
+          The New York City Transit Authority (NYCTA) operates one of the world’s largest public transportation systems, serving millions daily via subway and bus routes across the five boroughs.
+        </p>
+        <img src="employees.jpg" alt="MTA Employees Group Photo">
+      </div>
+
+      <div class="section" data-aos="fade-up">
+        <h2>🚇 Subway System</h2>
+        <img src="trains.png" alt="New York City Subway Train">
+        <p class="image-caption">Image Source: <a href="https://new.mta.info" target="_blank">MTA Official Website</a></p>
+      </div>
+
+      <div class="section" data-aos="fade-up">
+        <h2>📊 Quick Facts</h2>
+        <ul>
+          <li>472 subway stations across the city</li>
+          <li>2,500+ buses on 300 routes</li>
+          <li>Over 5.5 million weekday subway riders</li>
+          <li>Transit system operates 24/7</li>
+        </ul>
+      </div>
+
+      <div class="section" data-aos="fade-up">
+        <h2>🎯 Our Mission</h2>
+        <p>
+          To deliver safe, reliable, and accessible public transportation to every resident and visitor of New York City.
+        </p>
+      </div>
+
+      <div class="section" data-aos="fade-up">
+        <h2>🚍 Bus Services</h2>
+        <p>
+          NY Transit operates over 2,500 buses, covering nearly every corner of the five boroughs with frequent and affordable service.
+        </p>
+        <img src="bus.jpg" alt="NYC Public Bus">
+        <p class="image-caption">Image Source: NYC Transit Bus Fleet</p>
+      </div>
+
+      <div class="section" data-aos="fade-up">
+        <h2>💼 Careers at MTA</h2>
+        <p>
+          Join a team that keeps New York moving. From train operators to IT specialists, the MTA offers exciting career opportunities.
+        </p>
+        <ul>
+          <li>Competitive salaries and benefits</li>
+          <li>Diverse and inclusive work culture</li>
+          <li>Training and advancement programs</li>
+        </ul>
+        <p>
+          <a href="https://new.mta.info/careers" target="_blank" class="btn">Explore Careers at MTA</a>
+        </p>
+      </div>
+
+      <div class="section" data-aos="fade-up">
+        <h2>📅 Schedules & Timetables</h2>
+        <p>
+          Access real-time schedules for your subway and bus lines:
+        </p>
+        <ul>
+          <li><a href="https://new.mta.info/schedules/subway" target="_blank">Subway Timetable</a></li>
+          <li><a href="https://new.mta.info/schedules/bus" target="_blank">Bus Timetable</a></li>
+        </ul>
+      </div>
+
+      <div class="section" data-aos="fade-up">
+        <h2>📷 Transit Gallery</h2>
+        <p>
+          A glimpse into the life of New York transit in motion.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+          <img src="gallery1.jpg" alt="Subway Station">
+          <img src="gallery2.jpg" alt="MTA Employees in Action">
+          <img src="gallery3.jpg" alt="Bus Interior">
+        </div>
+        <p class="image-caption">Images from MTA photo archive (placeholders for class use)</p>
+      </div>
+
+      <div class="section" data-aos="fade-up" id="contact">
+        <h2>📞 Contact Us</h2>
+        <p>We’re here to help! Reach out to us through the following methods:</p>
+        <ul>
+          <li>Email: <a href="mailto:support@nytransit.gov">support@nytransit.gov</a></li>
+          <li>Phone: 1-800-NY-TRANS</li>
+          <li>Visit: 2 Broadway, New York, NY 10004</li>
+        </ul>
+      </div>
+
+      <footer style="text-align: center; padding: 30px 0; font-size: 14px; color: #888;">
+        © MTA Operations – Founded in 1965
+      </footer>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" title="Go to top" aria-label="Back to top">↑</button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+
+    // Back to Top Button logic
+    const backToTopBtn = document.getElementById("backToTopBtn");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    };
+    backToTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // Smooth scroll to contact section
+    document.querySelectorAll('a.scroll-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

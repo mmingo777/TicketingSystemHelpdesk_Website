@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">
+    ☰ Menu
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2>NY Transit<br>Operation</h2>
+      <a href="index.html">NY Transit Operations</a>
+      <a href="why-metrodesk.html">Why MetroDesk</a>
+      <a href="service-management.html">Service Management</a>
+      <a href="account.html" class="active">Account</a>
+    </div>
+
+    <div class="content">
+      <section class="section">
+        <h1>Account Management</h1>
+        <p>Manage access and user roles for the MetroDesk system. Admins can register users who can then log in using their credentials.</p>
+
+        <div style="margin-top: 30px;">
+          <h2>Current User Access Summary</h2>
+          <ul>
+            <li>👩‍💼 Admins: Full access to all functions</li>
+            <li>👨‍🔧 IT Staff: Manage and resolve tickets</li>
+            <li>🧑‍💻 Users: Submit and track tickets</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="center-btn">
+        <button class="btn" onclick="document.getElementById('createUserModal').style.display='block'">
+          ➕ Create New User
+        </button>
+      </div>
+    </div>
+  </div>
+<!-- Modal -->
+<div id="createUserModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeModal()">&times;</span>
+    <h2>Create New User</h2>
+
+    <form id="createUserForm">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="John Doe" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="e.g., user@nytransit.net" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number (optional)</label>
+        <input type="tel" id="phone" placeholder="e.g., 347-123-4567">
+      </div>
+
+      <div class="form-group">
+        <label for="role">Role</label>
+        <input type="text" id="role" placeholder="e.g., Admin, IT Staff, HR" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Create a secure password" required>
+      </div>
+
+      <button type="submit" class="btn-submit">Create User</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("createUserModal");
+
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  // Close modal when clicking outside of modal content
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  };
+</script>
+
+
+  <script>
+    // Close modal if clicked outside
+    window.onclick = function (event) {
+      const modal = document.getElementById("createUserModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
+
+

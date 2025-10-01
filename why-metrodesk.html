@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why MetroDesk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">
+   ☰ Menu
+  </div>
+  <div class="container">
+    <div class="sidebar">
+      <h2>NY Transit<br>Operation</h2>
+      <a href="index.html">NY Transit Operations</a>
+      <a href="why-metrodesk.html" class="active">Why MetroDesk</a>
+      <a href="service-management.html">Service Management</a>
+      <a href="account.html">Account</a>
+    </div>
+
+    <div class="content">
+      <div class="section" data-aos="fade-up">
+        <h1>🤝 Why Choose NY Transit?</h1>
+        <p>
+          At NY Transit, we pride ourselves on putting passengers first. With decades of service,
+          our network ensures reliability, accessibility, and coverage across all five boroughs.
+        </p>
+        <ul>
+          <li>🌐 Citywide coverage with high-frequency routes</li>
+          <li>♿️ Fully accessible infrastructure for all riders</li>
+          <li>🕐 24/7 service to support the city that never sleeps</li>
+          <li>🌱 Eco-friendly initiatives and clean energy adoption</li>
+        </ul>
+      </div>
+
+      <div class="section" data-aos="fade-up">
+        <h2 style="text-align: center;">💡 What MetroDesk Can Do</h2>
+        <div class="feature-grid">
+
+          <div class="feature-card">
+            <img src="ticket.png" alt="Submit Ticket Screenshot" class="feature-icon">
+            <h3>Submit a Ticket</h3>
+            <p>
+              Employees can quickly report issues by filling out a simple form with the title, description, priority, and optional file attachment.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <img src="solved.png" alt="Ticket Resolution Screenshot" class="feature-icon">
+            <h3>Track & Resolve</h3>
+            <p>
+              IT staff and admins can view ticket details, assign agents, leave resolution comments, and update ticket statuses in real time.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <img src="status.png" alt="Dashboard Analytics Screenshot" class="feature-icon">
+            <h3>View Reports</h3>
+            <p>
+              Gain visual insight through pie charts and summaries of ticket statuses. Track trends over time to improve efficiency.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="section" data-aos="fade-up">
+        <h2>🔒 Designed for Real Teams</h2>
+        <p>
+          MetroDesk isn’t just a classroom prototype — it’s built with real-world deployment in mind. 
+          The system uses a live SQL Server hosted in SQL Server Management Studio, where all tickets, users, and comments are stored securely.
+          <br><br>
+          Each staff member uses a secure login tied to their official <strong>@nytransit.net</strong> email, ensuring that only authorized employees can submit or manage tickets. This prevents unauthorized access and keeps internal data protected.
+        </p>
+        <ul>
+          <li>🔐 Role-based access for Admins, IT Staff, and Employees</li>
+          <li>📂 Attachments, comments, history tracking, and status updates</li>
+          <li>📊 Live dashboard reports and ticket summaries</li>
+        </ul>
+      </div>
+
+      <!-- CTA Banner -->
+      <div style="background-color: #fff7d6; text-align: center; padding: 60px 20px; margin-top: 60px; border-radius: 10px;">
+        <h2 style="font-size: 28px; font-weight: 700; color: #111; margin-bottom: 20px;">
+          Ready to bring structure to your IT chaos?
+        </h2>
+        <p style="font-size: 16px; color: #333; margin-bottom: 30px;">
+          MetroDesk is designed to be deployable within real organizations. Whether you're a school, transit authority, or small business — we can imagine a future where teams run smoother with our helpdesk system.
+        </p>
+        <a href="#" class="btn" style="background-color: #6c47ff; padding: 14px 28px; font-size: 16px;">
+          Imagine MetroDesk at Your Workplace
+        </a>
+      </div>
+
+    </div> <!-- end content -->
+  </div> <!-- end container -->
+
+  <footer style="text-align: center; padding: 30px 0; font-size: 14px; color: #888;">
+    © MTA Operations – Founded in 1965
+  </footer>
+
+  <button id="backToTopBtn" title="Go to top">↑</button>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true });</script>
+  <script>
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    };
+
+    backToTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+
+</body>
+</html>
+
+
